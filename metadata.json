@@ -1,0 +1,6 @@
+{
+  "name": "Sleepy Zapper",
+  "description": "Aim and zap buzzing mosquitoes before they bite the sleeper in bed.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

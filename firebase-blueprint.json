@@ -1,0 +1,62 @@
+{
+  "entities": {
+    "LeaderboardEntry": {
+      "title": "LeaderboardEntry",
+      "description": "PII-free public arcade high-score entry for Chudling Pong.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Authenticated user UID owning this leaderboard entry.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "playerName": {
+          "type": "string",
+          "description": "Public display nickname shown on the leaderboard.",
+          "minLength": 1,
+          "maxLength": 24,
+          "pattern": "^[a-zA-Z0-9 _\\-\\.]{1,24}$"
+        },
+        "score": {
+          "type": "integer",
+          "description": "Best arcade score achieved by the player."
+        },
+        "fireMode": {
+          "type": "string",
+          "description": "Weapon mode used during the best run.",
+          "enum": ["hand", "thirdLeg"]
+        },
+        "zappedCount": {
+          "type": "integer",
+          "description": "Total mosquitoes zapped during the best run."
+        },
+        "bestCombo": {
+          "type": "integer",
+          "description": "Highest hit streak achieved during the best run."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the score was recorded."
+        }
+      },
+      "required": [
+        "uid",
+        "playerName",
+        "score",
+        "fireMode",
+        "zappedCount",
+        "bestCombo",
+        "updatedAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{entryId}": {
+      "schema": { "$ref": "#/entities/LeaderboardEntry" },
+      "description": "Public top-score leaderboard keyed by authenticated user UID (entryId == uid)."
+    }
+  }
+}

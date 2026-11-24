@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#181826" />
+      <stop offset="100%" stop-color="#050507" />
+    </radialGradient>
+    <linearGradient id="zap" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#FFFFFF" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <!-- Night stars -->
+  <circle cx="96" cy="112" r="5" fill="#FDE68A" opacity="0.85" />
+  <circle cx="412" cy="96" r="4" fill="#E2E8F0" opacity="0.7" />
+  <circle cx="386" cy="168" r="3" fill="#FDE68A" opacity="0.6" />
+  <!-- Crescent moon -->
+  <path d="M128 72a52 52 0 1 0 64 64 40 40 0 1 1-64-64z" fill="#FEF08A" opacity="0.92" />
+  <!-- Target reticle -->
+  <circle cx="290" cy="212" r="98" fill="none" stroke="#EF4444" stroke-width="12" stroke-dasharray="22 14" opacity="0.9" />
+  <!-- Mosquito silhouette -->
+  <g transform="translate(290 212) rotate(-18)">
+    <ellipse cx="-24" cy="-32" rx="14" ry="38" transform="rotate(-24 -24 -32)" fill="#CBD5E1" opacity="0.55" />
+    <ellipse cx="14" cy="-36" rx="14" ry="40" transform="rotate(20 14 -36)" fill="#CBD5E1" opacity="0.65" />
+    <ellipse cx="26" cy="8" rx="34" ry="15" fill="#EF4444" />
+    <ellipse cx="-8" cy="0" rx="18" ry="13" fill="#785C47" />
+    <circle cx="-30" cy="-2" r="11" fill="#5E4534" />
+    <line x1="-40" y1="0" x2="-66" y2="10" stroke="#F8FAFC" stroke-width="5" stroke-linecap="round" />
+    <circle cx="-33" cy="-5" r="3.5" fill="#FDE68A" />
+  </g>
+  <!-- White sticky blast stream from bottom -->
+  <path d="M148 438 L272 246" stroke="url(#zap)" stroke-width="22" stroke-linecap="round" />
+  <circle cx="282" cy="230" r="24" fill="#FFFFFF" />
+  <circle cx="146" cy="438" r="16" fill="#FFFFFF" opacity="0.9" />
+</svg>
